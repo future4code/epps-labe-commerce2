@@ -106,6 +106,7 @@ dist
 
 # dependencies
 /node_modules
+src/App.js
 /.pnp
 .pnp.js
 

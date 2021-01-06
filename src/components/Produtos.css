@@ -1,0 +1,10 @@
+.containerProduto {
+    padding-top: 5px;
+    border: dashed orange 1px;
+    text-align: center;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
