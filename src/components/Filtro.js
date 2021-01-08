@@ -4,6 +4,17 @@ import './Filtro.css';
 
 export default class Filtro extends React.Component {
 
+  state = {
+    produtos: [
+      {
+        id: Date.now(),
+        name: "",
+        inputValueMin: "",
+        InputValueMax: "",
+        InputValueText: "",
+      }
+    ],
+  };
   onChangeInputMin = (event) => {
     this.setState({
       inputValueMin: event.target.value
@@ -28,14 +39,14 @@ export default class Filtro extends React.Component {
 
     const listaFiltrada = this.props.produtos.filter((produto) => {
 
-      if (produto.value > this.valueMin) {
+      if (produto.value < this.valueMax) {
         return true
       } else {
         return false
       }
     }).filter((produto) => {
 
-      if (produto.Text < this.valueMax) {
+      if (produto.Text < this.valueText) {
         return true
       } else {
         return false
@@ -57,7 +68,7 @@ export default class Filtro extends React.Component {
             })}</ul>
 
             <label for="valorMin">Valor Mínimo:</label>
-            <input valueMin={props.state.inputValueMin}
+            <input valueMin={this.state.inputValueMin}
               onChange={this.onChangeInputMin}
               type='number' />
           </div>
