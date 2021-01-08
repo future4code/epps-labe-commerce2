@@ -8,6 +8,7 @@ function Produtos(props) {
             <h4>{ props.name }</h4>
             <p>R${ props.value }</p>
             
+            {/* <button onClick={() => this.addAcarrinho(produto)}>Adicionar ao carrinho</button> */}
             <button>Adicionar ao carrinho</button>
         </div>
     );
